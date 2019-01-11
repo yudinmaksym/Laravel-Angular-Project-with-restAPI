@@ -10,4 +10,7 @@ API:
 <p>laravel-host/transaction/{customer_id}/{transaction_id}  "request: transaction from customer ID"</p>
 <br><br>
 <p>angular-host/  "all manipulations with data in database (app.conponents.html)" </p>
+<br><br>
+
+<p> Documentation helps: ![alt text](http://prntscr.com/m5tihq)
 
