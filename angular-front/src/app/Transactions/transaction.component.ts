@@ -110,7 +110,7 @@ export class TransactionComponent {
 
   	ngOnInit()
   	{
-  	  	this.http.get<Transaction[]>('http://127.0.0.1:8080//all-trans').subscribe(data => {
+  	  	this.http.get<Transaction[]>('http://127.0.0.1:8080/all-trans').subscribe(data => {
   	  		this.transaction = data;
 
   	  		console.log(data);
