@@ -110,7 +110,7 @@ export class TransactionComponent {
 
   	ngOnInit()
   	{
-  	  	this.http.get<Transaction[]>('http://testlaravel.dv/all-trans').subscribe(data => {
+  	  	this.http.get<Transaction[]>('http://127.0.0.1:8080//all-trans').subscribe(data => {
   	  		this.transaction = data;
 
   	  		console.log(data);
@@ -122,7 +122,7 @@ export class TransactionComponent {
 
         this.transaction.push(new Transaction(transCustomerId, transAmount));
 
-        this.http.post('http://testlaravel.dv/post-trans', JSON.stringify(new Transaction(transCustomerId, transAmount)), httpOptions).subscribe(response => {
+        this.http.post('http://127.0.0.1:8080/post-trans', JSON.stringify(new Transaction(transCustomerId, transAmount)), httpOptions).subscribe(response => {
 	  		  console.log(response);
           this.ngOnInit();
 	  	});
@@ -130,7 +130,7 @@ export class TransactionComponent {
 
     updateTrans(transId: number, transAmount: number): void {
 
-      this.http.post('http://testlaravel.dv/update-trans', JSON.stringify(new TransactionUpdate(transId, transAmount)), httpOptions).subscribe(response => {
+      this.http.post('http://127.0.0.1:8080/update-trans', JSON.stringify(new TransactionUpdate(transId, transAmount)), httpOptions).subscribe(response => {
           console.log(response);
           this.ngOnInit();
       });
@@ -138,7 +138,7 @@ export class TransactionComponent {
     }
 
     deleteTrans(checkedTrans: number): void{
-      this.http.post('http://testlaravel.dv/delete-trans', JSON.stringify(new TransactionDelete(checkedTrans)), httpOptions).subscribe(response => {
+      this.http.post('http://127.0.0.1:8080/delete-trans', JSON.stringify(new TransactionDelete(checkedTrans)), httpOptions).subscribe(response => {
           console.log(response);
           this.ngOnInit();
       });

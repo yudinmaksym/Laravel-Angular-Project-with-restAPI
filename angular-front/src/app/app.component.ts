@@ -90,7 +90,7 @@ export class AppComponent {
 
 	ngOnInit()
 	{
-	  	this.http.get<User[]>('http://testlaravel.dv/all-users').subscribe(data => {
+	  	this.http.get<User[]>('http://127.0.0.1:8080/all-users').subscribe(data => {
 	  		this.user = data;
 
 	  		console.log(data);
@@ -105,7 +105,7 @@ export class AppComponent {
 
         this.user.push(new User(name, email,password));
 
-        this.http.post('http://testlaravel.dv/post-users', JSON.stringify(new User(name, email, password)), httpOptions).subscribe(response => {
+        this.http.post('http://127.0.0.1:8080/post-users', JSON.stringify(new User(name, email, password)), httpOptions).subscribe(response => {
 	  		console.log(response);
 	  	});
     }
