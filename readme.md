@@ -4,10 +4,10 @@
 
 API:
 
-<p>http://127.0.0.1:8080/all-users   "request: all customers from DB "</p>
-<p>http://127.0.0.1:8080/all-trans   "request: all transactions from DB"</p>
-<p>http://127.0.0.1:8080/user/{id}   "request: customer with this ID"</p>
-<p>http://127.0.0.1:8080/transaction/{customer_id}/{transaction_id}  "request: transaction from customer ID"</p>
+<p>http://localhost:8000/all-users   "request: all customers from DB "</p>
+<p>http://localhost:8000/all-trans   "request: all transactions from DB"</p>
+<p>http://localhost:8000/user/{id}   "request: customer with this ID"</p>
+<p>http://localhost:8000/transaction/{customer_id}/{transaction_id}  "request: transaction from customer ID"</p>
 <br><br>
 <p>http://localhost:4200/  "all manipulations with data in database (app.conponents.html)" </p>
 <br><br>
