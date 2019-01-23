@@ -1,0 +1,39 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('all-users','UsersController@index');
+
+Route::get('all-trans','TransactionController@index');
+
+Route::match(['get', 'post'],'post-users','UsersController@store');
+
+Route::match(['get', 'post'],'post-trans','TransactionController@store');
+
+Route::match(['get', 'post'],'update-trans','TransactionController@update');
+
+Route::match(['get', 'post', 'delete'],'delete-trans','TransactionController@destroy');
+
+Route::get('user/{id}','UsersController@getOneUser');
+
+Route::get('transaction/{customer_id}/{transaction_id}','TransactionController@getOneTransaction');
+
+Route::get('/', function () {
+	    return view('welcome');
+	});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
